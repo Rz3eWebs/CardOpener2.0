@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card opener 2.0 | Free Football Packs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Kickoff Club home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>CARD <b>OPENER 2.0</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="active" href="#packs">Packs</a>
+        <a href="#collection">My Collection</a>
+      </nav>
+      <div class="profile-chip"><span class="online-dot"></span><span>Guest player</span><strong id="collection-count">0</strong></div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="packs">
+        <div class="hero-copy">
+          <p class="kicker"><span class="live-dot"></span> Live from the tunnel</p>
+          <h1>OPEN THE<br><em>GAME.</em></h1>
+          <p class="hero-text">Free football packs. Real drama.<br>Build your dream collection one pull at a time.</p>
+          <div class="hero-stats"><div><strong id="packs-opened">0</strong><span>Packs opened</span></div><div><strong>157</strong><span>Cards to find</span></div><div><strong>∞</strong><span>Good vibes</span></div></div>
+        </div>
+        <div class="hero-ball" aria-hidden="true"><div class="ball-shadow"></div><div class="ball"><span class="panel p1"></span><span class="panel p2"></span><span class="panel p3"></span><span class="panel p4"></span><span class="panel p5"></span></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div></div>
+        <div class="hero-note"><span class="note-line"></span><span>NO LOGIN<br>REQUIRED</span></div>
+      </section>
+
+      <section class="pack-section">
+        <div class="section-heading"><div><p class="eyebrow">Choose your drop</p><h2>WHAT'S IN THE PACK?</h2></div><span class="free-badge">ALL PACKS FREE <b>✦</b></span></div>
+        <div class="pack-grid">
+          <button class="pack-tile selected" data-pack="matchday" type="button"><span class="tile-tag">POPULAR</span><span class="pack-art matchday-art"><span class="art-stripe"></span><span class="art-ball">✦</span><b>MATCHDAY<br>PACK</b><small>10 cards · guaranteed rare</small></span><span class="tile-footer"><span>Matchday Pack</span><strong>OPEN <span>↗</span></strong></span></button>
+          <button class="pack-tile" data-pack="rising" type="button"><span class="pack-art rising-art"><span class="rising-number">10</span><b>RISING<br>STARS</b><small>10 cards · breakout talent</small></span><span class="tile-footer"><span>Rising Stars</span><strong>OPEN <span>↗</span></strong></span></button>
+          <button class="pack-tile" data-pack="legends" type="button"><span class="tile-tag gold-tag">LIMITED</span><span class="pack-art legends-art"><span class="laurel">✦</span><b>CLUB<br>LEGENDS</b><small>10 cards · iconic names</small></span><span class="tile-footer"><span>Club Legends</span><strong>OPEN <span>↗</span></strong></span></button>
+        </div>
+        <div class="action-row"><div class="tip"><span>✦</span><span>Every pack has a surprise inside.</span></div><button class="open-button" id="open-pack" type="button">OPEN PACK <span>→</span></button></div>
+      </section>
+
+      <section class="collection-section" id="collection"><div class="collection-heading"><div><p class="eyebrow">Your locker room</p><h2>RECENT PULLS</h2></div><span id="pull-count">0 cards collected</span></div><div class="recent-pulls" id="recent-pulls"><div class="empty-state"><span>✦</span><p>Your next favorite player is waiting.</p><small>Open a pack to start your collection.</small></div></div></section>
+    </main>
+    <footer><span>© 2024 KICKOFF CLUB</span><span>Made for the love of the game <b>●</b></span><span>PLAY FAIR. HAVE FUN.</span></footer>
+  </div>
+  <div class="modal-backdrop" id="reveal-modal" aria-hidden="true"><div class="reveal-modal" role="dialog" aria-modal="true" aria-labelledby="reveal-title"><button class="close-modal" id="close-modal" type="button" aria-label="Close">×</button><p class="eyebrow">Pack opened</p><h2 id="reveal-title">YOUR PULLS</h2><p class="reveal-progress" id="reveal-progress">CARD 1 OF 3</p><div class="revealed-cards" id="revealed-cards"></div><button class="again-button" id="open-again" type="button">OPEN ANOTHER <span>→</span></button></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
